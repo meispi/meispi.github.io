@@ -13,7 +13,7 @@ let time = 0;
 let path = [];
 
 function setup() {
-  createCanvas(1000, 1000);
+  createCanvas(1500, 1000);
   const skip = 8;
   for (let i = 0; i < drawing.length; i += skip) {
     const c = new Complex(drawing[i].x,drawing[i].y);
@@ -51,7 +51,7 @@ function epiCycles(x, y, rotation, fourier) {
 function draw() {
   background(0);
 
-  let v = epiCycles(width / 2, height / 2, 0, fourierX);
+  let v = epiCycles(width / 3 -200, height / 3 -300, 0, fourierX);
   path.unshift(v);
 
   beginShape();
